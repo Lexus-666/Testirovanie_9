@@ -24,5 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
 
-    - name: Run pytest
-      run: pytest -v LAB_6/unit_tests_6.py
+    - name: Run specific unit tests
+      run: |
+        cd LAB_6
+        python -m pytest unit_tests_6.py -v
